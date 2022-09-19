@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap%27');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#teste{
+    width: 400px;
+    height: 300px;
+}
+
+body {
+    background-image: url(https://www.echosis.com.br/site/wp-content/uploads/2017/02/petshop-mkt.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.search-box{
+    position: absolute;
+    top: 23px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #000;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.search-btn{
+      color: #00b8b2;
+      float: right;
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      background: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 2s;
+}
+  
+  .search-txt{
+      border: none;
+      display: block;
+      background: none;
+      outline: none;
+      float: left;
+      padding: 0;
+      color: white;
+      font-size: 16px;
+      font-family: "Manjari";
+      transition: 0.8s;
+      line-height: 30px;
+      width:0px;
+  }
+  
+  .search-box:hover > .search-txt{
+      width: 200px;
+      padding: 3px;
+  }
+  
+  .search-box:hover > .search-btn{
+      background: white;
+  }
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: thin;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00b8b2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Manjari';
+    background-color: #000;
+    height: 6vh;
+}
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    color: #00b8b2;
+}
+
+.nav-list li a {
+    color: #00b8b2;
+}
+
+.nav-list li:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.7s;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #000;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.tdpr {
+    display: flex;
+}
+
+.tdpr p {
+    font-family: 'Manjari';
+    font-weight: 700;
+    font-size: 1.7em;
+    width: 250px;
+    margin-top: 1.5em;
+    margin-left: 11.2em;
+    height: 25px;
+}
+
+option {
+    font-family: 'Manjari';
+    font-weight: 700;
+}
+
+.sel1{
+    font-family: 'Manjari';
+    font-weight: 700;
+    font-size: 1em;
+    margin-top: 2.3em;
+    margin-left: 36.1em;
+    border-radius: 10px;
+    width: 160px;
+    height: 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 30px;
+    margin: 20px;
+    width: 300px;
+    transition: all 0.3s ease-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.card p {
+    color: #a3a5ae;
+    font-size: 16px;
+}
+
+.image {
+    border-radius: 20px;
+    float: center;
+    max-width: 240px;
+    max-height: 250px;
+}
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+
+.row2{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul{
+	list-style: none;
+}
+
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-family: 'Manjari';
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-col h4::before{
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-family: 'Manjari';
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+
+.footer-col .social-links a{
+    font-family: 'Manjari';
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+}
+}
+
+@media(max-width: 574px){
+    .footer-col{
+        width: 100%;
+}
+}
